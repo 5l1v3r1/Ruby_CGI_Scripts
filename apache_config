@@ -1,0 +1,9 @@
+- Add the following in '/etc/apache2/sites-available/default' (between existing <VirtualHost></VirtualHost> tags)
+
+
+
+        <Directory /var/www/ruby-cgi>
+                AddHandler cgi-script .rb .erb
+                Options +ExecCGI
+        </Directory>
+
